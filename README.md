@@ -8,11 +8,13 @@
 3. [Building images with Dockerfiles](03-Images.md)
 4. [Cli commands : ports mapping , volumes,…](04-Dockerfiles.md)
 5. [Docker compose example for a website](05-Docker-compose.md)
-6. [Compose scale up and down and Stack deploy example](06-Docker-stack.md)
-7. [Intro to next steps: volumes, network, orchestration](07-Orchestration_intro.md)
+6. [Intro to next steps: volumes, network, orchestration](06-Orchestration_intro.md)
+7. [Compose scale up and down and Stack deploy example](07-Docker-stack.md)
+
 
 ## Links
 * https://docs.docker.com/get-started/
 * https://training.play-with-docker.com/
 * https://www.katacoda.com/courses/docker
 * https://github.com/docker/labs
+* https://intro-2019-01.container.training

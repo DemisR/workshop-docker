@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always # This option is ignored when deploying a stack in swarm mode with a (version 3) Compose file. Use restart_policy instead.
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on: # Express dependency between services
+      - db
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wp_data:/var/www/html
+
+volumes: # you can use volumes plugins or use basic docker volumes
+  db_data: # if empty , the default driver configured by the Engine 
+  wp_data: 
+

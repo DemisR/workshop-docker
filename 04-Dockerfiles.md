@@ -158,3 +158,4 @@ docker run -p 4000:80 username/repository:tag
 If the image isn’t available locally on the machine, Docker pulls it from the repository.
 
 
+# Multi stage Dockerfile TODO:
