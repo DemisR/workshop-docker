@@ -58,9 +58,9 @@ Create two more files, `requirements.txt` and `app.py`, and put them in the same
 This completes our app, which as you can see is quite simple.
 When the above Dockerfile is built into an image, app.py and requirements.txt is present because of that Dockerfile’s `COPY` command, and the output from app.py is accessible over HTTP thanks to the `EXPOSE` command.
 
-[requirements.txt](02-example/requirements.txt)
+[requirements.txt](04-example/requirements.txt)
 
-[app.py](02-example/app.py)
+[app.py](04-example/app.py)
 
 Now we see that `pip install -r requirements.txt` installs the Flask and Redis libraries for Python, and the app prints the environment variable NAME, as well as the output of a call to socket.gethostname(). 
 Finally, because Redis isn’t running (as we’ve only installed the Python library, and not Redis itself), we should expect that the attempt to use it here fails and produces the error message.
@@ -158,4 +158,5 @@ docker run -p 4000:80 username/repository:tag
 If the image isn’t available locally on the machine, Docker pulls it from the repository.
 
 
-# Multi stage Dockerfile TODO:
+> Multi stage Dockerfile 
+> https://docs.docker.com/develop/develop-images/multistage-build/

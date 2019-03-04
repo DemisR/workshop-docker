@@ -4,15 +4,19 @@
 
 0. TODO: [Docker . A Little explanation](https://www.docker.com/resources/what-container)
 1. [Running your first container](01-Your_first_container.md)
-2. [Images and docker hub usage](02-Ports_volumes_etc.md)
-3. [Building images with Dockerfiles](03-Images.md)
-4. [Cli commands : ports mapping , volumes,…](04-Dockerfiles.md)
+2. [Cli commands : ports mapping , volumes,…](02-Ports_volumes_etc.md)
+3. [Images and docker hub usage](03-Images.md)
+4. [Building images with Dockerfiles](04-Dockerfiles.md)
 5. [Docker compose example for a website](05-Docker-compose.md)
 6. [Intro to next steps: volumes, network, orchestration](06-Orchestration_intro.md)
 7. [Compose scale up and down and Stack deploy example](07-Docker-stack.md)
 
 
+
+
 ## Links
+
+Sources and usefull trainig sites
 * https://docs.docker.com/get-started/
 * https://training.play-with-docker.com/
 * https://www.katacoda.com/courses/docker
