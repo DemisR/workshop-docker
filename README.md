@@ -2,7 +2,7 @@
 
 ## Agenda
 
-0. TODO: [Docker . A Little explanation](https://www.docker.com/resources/what-container)
+0. [Docker . A Little explanation](00-Docker-intro.md)
 1. [Running your first container](01-Your_first_container.md)
 2. [Cli commands : ports mapping , volumes,…](02-Ports_volumes_etc.md)
 3. [Images and docker hub usage](03-Images.md)
