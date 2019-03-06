@@ -51,7 +51,9 @@ Whenever changes are made to a container, only the changes will be written to di
 **Networking** Docker implements networking  in an application-driven manner and provides various options while maintaining enough abstraction for application developers.
 
 **Storage**
+
 ![](images/types-of-mounts-volume.png)
+
 **Volumes** provide the ability to create persistent storage, with the ability to rename volumes, list volumes, and also list the container that is associated with the volume
 
 **Docker registries** Stores, distributes and manages Docker images
