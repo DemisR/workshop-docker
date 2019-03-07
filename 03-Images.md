@@ -47,6 +47,10 @@ Now, to create an image we need to **commit** this container.
 Commit creates an image locally on the system running the Docker engine.
 Run the following command, using the container ID you retrieved, in order to commit the container and create an image out of it.
 
+```
+docker commit <container_id>
+```
+
 That’s it - you have created your first image! Once it has been commited, we can see the newly created image in the list of available images.
 
 ```
