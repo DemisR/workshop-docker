@@ -11,14 +11,12 @@
 6. [Intro to next steps: volumes, network, orchestration](06-Orchestration_intro.md)
 7. [Compose scale up and down and Stack deploy example](07-Docker-stack.md)
 
-
-
-
 ## Links
 
 Sources and usefull trainig sites
-* https://docs.docker.com/get-started/
-* https://training.play-with-docker.com/
-* https://www.katacoda.com/courses/docker
-* https://github.com/docker/labs
-* https://intro-2019-01.container.training
+
+- https://docs.docker.com/get-started/
+- https://training.play-with-docker.com/
+- https://www.katacoda.com/courses/docker
+- https://github.com/docker/labs
+- https://intro-2019-01.container.training
