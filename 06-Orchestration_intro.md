@@ -1,6 +1,12 @@
+---
+marp: true
+---
+
 # Orchestartion
 
 Container orchestration is all about managing the lifecycles of containers, especially in large, dynamic environments.
+
+---
 
 Container orchestration control and automate many tasks:
 
@@ -14,7 +20,11 @@ Container orchestration control and automate many tasks:
 - Health monitoring of containers and hosts
 - Configuration of an application in relation to the containers running it
 
+---
+
 ## Some orchestrators
+
+---
 
 ### Kubernetes
 
@@ -24,6 +34,8 @@ Container orchestration control and automate many tasks:
 - Many deployment options; some of them very complex.
 - Reputation: steep learning curve. ( if we focus on what matters. Not so complex. )
 
+---
+
 ### Swarm
 
 - Tightly integrated with the Docker Engine.
@@ -32,6 +44,8 @@ Container orchestration control and automate many tasks:
 - Strongly opinionated:
   - smaller set of features,
   - easier to operate.
+
+---
 
 ### Nomad
 
