@@ -7,9 +7,9 @@
 2. [Cli commands : ports mapping , volumes,…](02-Ports_volumes_etc.md)
 3. [Images and docker hub usage](03-Images.md)
 4. [Building images with Dockerfiles](04-Dockerfiles.md)
-5. [Docker compose example for a website](05-Docker-compose.md)
-6. [Intro to next steps: volumes, network, orchestration](06-Orchestration_intro.md)
-7. [Compose scale up and down and Stack deploy example](07-Docker-stack.md)
+5. [Multistage Dockerfile](05-Multistage.md)
+6. [Docker compose example for a website](06-Docker-compose.md)
+7. [Intro to next steps: volumes, network, orchestration](07-Orchestration_intro.md)
 
 ## Links
 
