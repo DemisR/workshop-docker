@@ -5,7 +5,41 @@ marp: true
 # Docker-compose
 
 Compose is a tool for defining and running multi-container Docker applications.
+
 With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
+
+---
+
+This is how you work with Compose:
+
+- You describe a set (or stack) of containers in a YAML file called `docker-compose.yml`.
+
+- You run `docker-compose up`.
+
+- Compose automatically pulls images, builds containers, and starts them.
+
+- Compose can set up links, volumes, and other Docker options for you.
+
+- Compose can run the containers in the background, or in the foreground.
+
+- When containers are running in the foreground, their aggregated output is shown.
+
+---
+
+## The `docker-compose.yml` file
+
+```yaml
+version: "3.8"
+
+services:
+  web:
+    build: ./04-example
+    ports:
+      - "4000:80"
+
+  redis:
+    image: redis:alpine
+```
 
 ---
 
