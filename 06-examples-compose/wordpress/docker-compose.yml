@@ -1,8 +1,8 @@
-version: '3.3'
+version: '3.8'
 
 services:
   db:
-    image: mysql:5.7
+    image: mariadb:10.6.4-focal
     volumes:
       - db_data:/var/lib/mysql
     restart: always # This option is ignored when deploying a stack in swarm mode with a (version 3) Compose file. Use restart_policy instead.
@@ -30,4 +30,3 @@ services:
 volumes: # you can use volumes plugins or use basic docker volumes
   db_data: # if empty , the default driver configured by the Engine 
   wp_data: 
-

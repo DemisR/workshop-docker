@@ -130,9 +130,9 @@ docker compose logs web
 
 # Exercise
 
-Create a compose file for running guestbook app in `05-exercise-docker-compose` folder.
+Create a compose file for running a nodejs app in `05-exercise-docker-compose` folder.
 
-The guestbook app in `05-exercise-docker-compose/guestbook` must be builded by compose and expose port 3000 to your local port 8088.
+The nodejs app in `05-exercise-docker-compose/nodejs` must be builded by compose and expose port 5000 to your local port 9001.
 The app require a redis service named `redis` to work.
 
 ---
@@ -147,10 +147,10 @@ services:
   redis:
     image: redis:alpine
 
-  guestbook:
-    build: ./guestbook
+  nodejs:
+    build: ./nodejs
     ports:
-      - "8088:3000"
+      - "9001:5000"
     depends_on:
       - redis
 ```
