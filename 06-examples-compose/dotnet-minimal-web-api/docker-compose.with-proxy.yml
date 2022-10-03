@@ -1,0 +1,54 @@
+version: "3.8"
+
+services:
+  backend:
+    build: .
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - "9000:5000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend.rule=Host(`backend.local`)"
+      - "traefik.http.routers.backend.entrypoints=web-secure"
+      - "traefik.http.routers.backend.tls.certresolver=certificato"
+      - "traefik.http.routers.backend.tls.domains[0].main=*.local"
+
+  database:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: notesdb
+    volumes: 
+      - pgdata:/var/lib/postgresql/data 
+
+  traefik:
+    image: "traefik:v2.8"
+    container_name: "traefik"
+    command:
+      - "--log.level=INFO"
+      - "--api.insecure=true"
+      - "--api.dashboard=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web-secure.address=:443"
+    restart: always
+
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+volumes:
+  pgdata:
+    driver: local
+
+
+  # http GET https://backend.local --verify false
+  # http://localhost:8080/dashboard
