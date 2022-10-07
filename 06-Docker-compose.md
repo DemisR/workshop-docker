@@ -6,7 +6,8 @@ marp: true
 
 Compose is a tool for defining and running multi-container Docker applications.
 
-With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
+With Compose, you use a YAML file to configure your application’s services.
+Then, with a single command, you create and start all the services from your configuration.
 
 ---
 
@@ -130,29 +131,19 @@ docker compose logs web
 
 # Exercise
 
-Create a compose file for running a nodejs app in `05-exercise-docker-compose` folder.
+Create a compose file for running a nodejs app in `06-exercise-docker-compose` folder.
 
-The nodejs app in `05-exercise-docker-compose/nodejs` must be builded by compose and expose port 5000 to your local port 9001.
+The `nodejs` app must be builded by compose and
+expose port `5000` to your local port `9001`.
+
 The app require a redis service named `redis` to work.
 
 ---
 
-<details>
-  <summary>💡 Solution</summary>
+# Other docker-compose examples
 
-```yaml
-version: "3"
-
-services:
-  redis:
-    image: redis:alpine
-
-  nodejs:
-    build: ./nodejs
-    ports:
-      - "9001:5000"
-    depends_on:
-      - redis
-```
-
-</details>
+- [06-examples-compose/dotnet-minimal-web-api/docker-compose.yml](06-examples-compose/dotnet-minimal-web-api/docker-compose.yml)
+- [06-examples-compose/dotnet-minimal-web-api/docker-compose.with-proxy.yml](06-examples-compose/dotnet-minimal-web-api/docker-compose.with-proxy.yml)
+- [06-examples-compose/wordpress/docker-compose.yml](06-examples-compose/wordpress/docker-compose.yml)
+- [06-examples-compose/voting-app/docker-compose.yml](06-examples-compose/voting-app/docker-compose.yml)
+- https://github.com/docker/awesome-compose

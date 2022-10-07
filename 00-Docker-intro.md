@@ -25,13 +25,13 @@ Containers are **lightweight** software packages that **contain all the dependen
 
 # VM vs Container
 
-| Virtual Machine                      |                    Container                     |
-| :----------------------------------- | :----------------------------------------------: |
-| Hardware-level process isolation     |            OS level process isolation            |
-| Startup time in minutes              |             Startup time in seconds              |
-| Heavyweight (GBs)                    |              Lightweight (KBs/MBs)               |
+| Virtual Machine                      | Container                                        |
+| :----------------------------------- | :----------------------------------------------- |
+| Hardware-level process isolation     | OS level process isolation                       |
+| Startup time in minutes              | Startup time in seconds                          |
+| Heavyweight (GBs)                    | Lightweight (KBs/MBs)                            |
 | Ready-made VMs are difficult to find | Pre-built docker containers are easily available |
-| More resource usage                  |               Less resource usage                |
+| More resource usage                  | Less resource usage                              |
 
 ---
 
