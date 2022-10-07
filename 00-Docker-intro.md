@@ -6,13 +6,32 @@ marp: true
 
 ---
 
-VMs are an infrastructure level construct to turn one machine into many servers
-![bg right contain](images/vm.png)
+## VM
+
+A Virtual Machine is a system which acts exactly like a computer.
+
+In simple terms, it makes it possible to run what appears to be on many separate computers on hardware, that is one computer.
+
+Each virtual machine requires its underlying operating system, and then the **hardware is virtualized**.
+
+![bg right contain](images/intro_vms.png)
 
 ---
 
-Containers are an app level construct
-![bg right contain](images/containers.png)
+Containers are **lightweight** software packages that **contain all the dependencies** required to execute the contained software application.
+![bg right contain](images/intro_containers.png)
+
+---
+
+# VM vs Container
+
+| Virtual Machine                      |                    Container                     |
+| :----------------------------------- | :----------------------------------------------: |
+| Hardware-level process isolation     |            OS level process isolation            |
+| Startup time in minutes              |             Startup time in seconds              |
+| Heavyweight (GBs)                    |              Lightweight (KBs/MBs)               |
+| Ready-made VMs are difficult to find | Pre-built docker containers are easily available |
+| More resource usage                  |               Less resource usage                |
 
 ---
 
@@ -20,11 +39,12 @@ Containers are an app level construct
 
 ---
 
-## What Is A Linux Container?
+## What is really a Container?
 
-Each container will have its isolated user space and you can run multiple containers on a host, each having its own user space.
+**Isolated** group of processes with **resource limits** usage applied running **on a host**.
 
-It means you can run different Linux systems (containers) on a single host.
+You can run different Linux systems (containers) on a single host.
+
 For example, you can run an RHEL and a SUSE container on an Ubuntu server.
 The Ubuntu Server can be a virtual machine or a physical host.
 
@@ -82,16 +102,23 @@ Docker has an efficient workflow for moving your application from developers lap
 
 ## Images
 
-- read-only binary template used to build containers.
-- made up of filesystems layered over each other.
-- Docker uses Copy-on-write union file system for its backend storage.
-- Whenever changes are made to a container, only the changes will be written to disk using copy on write model.
+- **read-only** binary template used to build containers
+- made up of filesystems **layered** over each other
+- Docker uses **Copy-on-write** union file system for its backend storage
+- Whenever changes are made to a container,
+  only the changes will be written to disk using copy on write model.
 
 ![bg right:60% 80%](images/layers.jpg)
 
 ---
 
-![bg left:60% 80%](images/containers.png)
+![bg contain](images/why-are-containers-lightwight.png)
+
+---
+
+## Container
+
+![bg left contain](images/image_vs_container.png)
 
 **Containers** The image when it is 'running'.
 The standard unit for app service.
@@ -103,13 +130,15 @@ The standard unit for app service.
 
 ---
 
-## Storage
+## Volumes
 
 ![bg right contain](images/types-of-mounts-volume.png)
 
 **Volumes** provide the ability to create persistent storage, with the ability to rename volumes, list volumes, and also list the container that is associated with the volume
 
 ---
+
+## Registry
 
 ![bg left:60% 80%](images/base_registry.png)
 **Docker registries** Stores, distributes and manages Docker images
