@@ -2,6 +2,25 @@
 marp: true
 ---
 
+# https://github.com/DemisR/workshop-docker
+
+```
+git pull git@github.com:DemisR/workshop-docker.git
+```
+
+---
+
+# Cargo container
+
+![bg left contain](images/container_photo.png)
+
+- standard
+- can be stacked neatly on top of each other
+- can also carry nearly any kind of goods
+- large ecosystem made for shipping it
+
+---
+
 # Container vs VM
 
 ---
@@ -35,11 +54,7 @@ Containers are **lightweight** software packages that **contain all the dependen
 
 ---
 
-# Container
-
----
-
-## What is really a Container?
+# What is really a Container?
 
 **Isolated** group of processes with **resource limits** usage running **on a host**.
 
@@ -78,13 +93,9 @@ A control group (**cgroup**) is a Linux kernel feature that limits, accounts for
 
 ---
 
-## What Is Docker ?
+# What is Docker ?
 
-Docker is basically a container engine which uses the Linux Kernel features like namespaces and control groups to create containers on top of an operating system and automates application deployment on the container.
-
-It provides a lightweight environment to run your application code.
-
-Docker has an efficient workflow for moving your application from developers laptop, test environment to production.
+Docker is a **tool** for developing and deploying applications using containers.
 
 ---
 
