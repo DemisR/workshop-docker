@@ -41,7 +41,7 @@ Containers are **lightweight** software packages that **contain all the dependen
 
 ## What is really a Container?
 
-**Isolated** group of processes with **resource limits** usage applied running **on a host**.
+**Isolated** group of processes with **resource limits** usage running **on a host**.
 
 You can run different Linux systems (containers) on a single host.
 
