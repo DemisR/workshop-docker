@@ -19,6 +19,5 @@ Sources and usefull trainig sites
 
 - https://docs.docker.com/get-started/
 - https://training.play-with-docker.com/
-- https://www.katacoda.com/courses/docker
 - https://github.com/docker/labs
 - https://intro-2019-01.container.training
