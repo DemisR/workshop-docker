@@ -13,7 +13,6 @@ builder.Services.AddDbContext<NoteDb>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,7 +25,8 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/", () => "Welcome to Notes API!");
 
 // Create Note
-app.MapPost("/notes/", async(Note n, NoteDb db)=> {
+app.MapPost("/notes/", async (Note n, NoteDb db) =>
+{
     db.Notes.Add(n);
     await db.SaveChangesAsync();
 
@@ -34,7 +34,7 @@ app.MapPost("/notes/", async(Note n, NoteDb db)=> {
 });
 
 // Read Note by id
-app.MapGet("/notes/{id:int}", async(int id, NoteDb db)=> 
+app.MapGet("/notes/{id:int}", async (int id, NoteDb db) =>
 {
     return await db.Notes.FindAsync(id)
             is Note n
@@ -46,7 +46,7 @@ app.MapGet("/notes/{id:int}", async(int id, NoteDb db)=>
 app.MapGet("/notes", async (NoteDb db) => await db.Notes.ToListAsync());
 
 // Update a Note by id
-app.MapPut("/notes/{id:int}", async(int id, Note n, NoteDb db)=>
+app.MapPut("/notes/{id:int}", async (int id, Note n, NoteDb db) =>
 {
     if (n.id != id)
     {
@@ -54,7 +54,7 @@ app.MapPut("/notes/{id:int}", async(int id, Note n, NoteDb db)=>
     }
 
     var note = await db.Notes.FindAsync(id);
-    
+
     if (note is null) return Results.NotFound();
 
     //found, so update with incoming note n.
@@ -65,10 +65,12 @@ app.MapPut("/notes/{id:int}", async(int id, Note n, NoteDb db)=>
 });
 
 // Delete a Note by id
-app.MapDelete("/notes/{id:int}", async(int id, NoteDb db)=>{
+app.MapDelete("/notes/{id:int}", async (int id, NoteDb db) =>
+{
 
     var note = await db.Notes.FindAsync(id);
-    if (note is not null){
+    if (note is not null)
+    {
         db.Notes.Remove(note);
         await db.SaveChangesAsync();
     }
@@ -77,13 +79,16 @@ app.MapDelete("/notes/{id:int}", async(int id, NoteDb db)=>{
 
 await app.RunAsync();
 
-record Note(int id){
-    public string text {get;set;} = default!;
-    public bool done {get;set;} = default!;
+record Note(int id)
+{
+    public string text { get; set; } = default!;
+    public bool done { get; set; } = default!;
 }
 
-class NoteDb: DbContext {
-    public NoteDb(DbContextOptions<NoteDb> options): base(options) {
+class NoteDb : DbContext
+{
+    public NoteDb(DbContextOptions<NoteDb> options) : base(options)
+    {
 
     }
     public DbSet<Note> Notes => Set<Note>();
