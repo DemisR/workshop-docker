@@ -50,11 +50,11 @@ docker container ls -a
 ```
 
 (There is no difference between `docker ps` and `docker container ls`.
-The new command structure `docker container <subcommand>` was added in Docker 1.13 to provider a more structured user experience when using the command line.)
+The new command structure `docker container <subcommand>` was added in Docker 1.13 to provide a more structured user experience when using the command line.)
 
 ---
 
-Before we create our own image, we might want to inspect all the changes we made.
+Before we create our image, we might want to inspect all the changes we made.
 Try typing the command `docker container diff <container ID>` for the container you just created.
 
 ---
@@ -69,7 +69,7 @@ docker commit <container_id>
 
 ---
 
-That’s it - you have created your first image! Once it has been commited, we can see the newly created image in the list of available images.
+That’s it - you have created your first image! Once it has been committed, we can see the newly created image in the list of available images.
 
 ```
 $ docker image ls

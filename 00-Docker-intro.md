@@ -27,7 +27,7 @@ git pull git@github.com:DemisR/workshop-docker.git
 
 ## VM
 
-A Virtual Machine is a system which acts exactly like a computer.
+A Virtual Machine is a system that acts exactly like a computer.
 
 In simple terms, it makes it possible to run what appears to be on many separate computers on hardware, that is one computer.
 
@@ -54,9 +54,9 @@ Containers are **lightweight** software packages that **contain all the dependen
 
 ---
 
-# What is really a Container?
+# What is a Container for the system?
 
-**Isolated** group of processes with **resource limits** usage running **on a host**.
+An **Isolated** group of processes with **resource limits** usage running **on a host**.
 
 You can run different Linux systems (containers) on a single host.
 
@@ -93,7 +93,7 @@ A control group (**cgroup**) is a Linux kernel feature that limits, accounts for
 
 ---
 
-# What is Docker ?
+# What is Docker?
 
 Docker is a **tool** for developing and deploying applications using containers.
 

@@ -48,10 +48,10 @@ $ docker rm static-site
 
 ---
 
-Ok, but if I prefer mapping the ports on more clear I can do with the option `-p`.
+If I prefer mapping the port on a specific one I can do it with option `-p`.
 
-First stop the container `docker stop static-site`
-and now map the port 80 of the container to 8888 port of the host machine.
+First of all, stop the container `docker stop static-site`
+and now map port 80 of the container to 8888 port of the host machine.
 
 ```
 docker run --name static-site -e AUTHOR="Your Name" -d -p 8888:80 dockersamples/static-site
@@ -74,9 +74,9 @@ docker run -p <new-port-mapping> <container-name-from-step-1>
 
 ## Volumes
 
-Basicly volumes are special directories in containers "mounted" from somewhere.
+Basically, volumes are special directories in containers "mounted" from somewhere.
 
-Docker volumes are usefull for leave some files out of docker or sharing a directory/file between multiple containers/hosts.
+Docker volumes are useful for living some files out of docker or sharing a directory/file between multiple containers/hosts.
 
 You can use local storage or a remote storage (plugins or custom).
 
@@ -98,7 +98,7 @@ docker run -d -v /uploads myapp
 
 - When you `docker commit`, **the content of volumes is not brought into the resulting image**.
 
-- If a `RUN` instruction in a Dockerfile changes the content of a volume, those changes are not recorded neither.
+- If a `RUN` instruction in a Dockerfile changes the content of a volume, those changes are neither recorded.
 
 - If a container is started with the `--read-only` flag, **the volume still be writable** (unless the volume is a read-only volume).
 
@@ -157,7 +157,7 @@ Let's start another container using the **html** volume.
 $ docker run -v mycustomwebsite:/html --workdir /html -ti alpine vi index.html
 ```
 
-Edit the page , save and exit.
+Edit the page, save and exit.
 Run `curl localhost:1234` again to see your changes.
 
 ---

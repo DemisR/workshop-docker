@@ -2,13 +2,13 @@
 marp: true
 ---
 
-# Orchestartion
+# Orchestration
 
 Container orchestration is all about managing the lifecycles of containers, especially in large, dynamic environments.
 
 ---
 
-Container orchestration control and automate many tasks:
+Container orchestration controls and automates many tasks:
 
 - Provisioning and deployment of containers
 - Redundancy and availability of containers

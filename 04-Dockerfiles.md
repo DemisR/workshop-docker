@@ -37,7 +37,7 @@ A Dozen Dockerfile Instructions
 - CMD — provides a command and arguments for an executing container. Parameters can be overridden. There can be only one CMD.
 - WORKDIR — sets the working directory for the instructions that follow.
 - ARG — defines a variable to pass to Docker at build-time.
-- ENTRYPOINT — provides command and arguments for an executing container. Arguments persist.
+- ENTRYPOINT — provides commands and arguments for an executing container. Arguments persist.
 - EXPOSE — exposes a port.
 - VOLUME — creates a directory mount point to access and store persistent data.
 
@@ -154,8 +154,8 @@ docker tag <image> <username/repository:tag>
 
 ---
 
-In the previus example we already set a tag but the name it's not the same.
-We must specify to than this images is a remote image.
+In the previous example we already set a tag but the name it's not the same.
+We must specify to than this image is a remote image.
 
 ```
 docker tag handsonlab:v0.1 deri/handsonlab:v0.1

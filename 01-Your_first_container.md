@@ -87,7 +87,7 @@ For stop the running container use `docker stop <friendly-name|container-id>` or
 
 ## Terminology
 
-- _Images_ - The file system and configuration of our application which are used to create containers.
+- _Images_ - The file system and configuration of our application which is used to create containers.
   To find out more about a Docker image, run `docker inspect alpine`.
   In the demo above, you used the `docker pull` command to download the **alpine** image.
   When you executed the command `docker run hello-world`, it also did a `docker pull` behind the scenes to download the **hello-world** image.
@@ -97,11 +97,11 @@ For stop the running container use `docker stop <friendly-name|container-id>` or
 - _Containers_ - Running instances of Docker images &mdash; containers run the actual applications.
   A container includes an application and all of its dependencies.
   It shares the kernel with other containers, and runs as an isolated process in user space on the host OS.
-  You created a container using `docker run` which you did using the alpine image that you downloaded.
+  You created a container using `docker run` which you did use the alpine image that you downloaded.
   A list of running containers can be seen using the `docker ps` command.
 
 ---
 
-- _Docker daemon_ - The background service running on the host that manages building, running and distributing Docker containers.
+- _Docker daemon_ - The background service running on the host that manages builds and runs and distributes Docker containers.
 - _Docker client_ - The command line tool that allows the user to interact with the Docker daemon.
-- _Docker store/hub_ - A [registry](https://hub.docker.com/) of Docker images, where you can find trusted and enterprise ready containers, plugins, and Docker editions. You'll be using this later in this tutorial.
+- _Docker store/hub_ - A [registry](https://hub.docker.com/) of Docker images, where you can find trusted and enterprise-ready containers, plugins, and Docker editions. You'll be using this later in this tutorial.

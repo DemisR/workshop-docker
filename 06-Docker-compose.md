@@ -6,7 +6,8 @@ marp: true
 
 Compose is a tool for defining and running multi-container Docker applications.
 
-With Compose, you use a YAML file to configure your application’s services.
+With Compose, you use a YAML file to configure your application's services.
+
 Then, with a single command, you create and start all the services from your configuration.
 
 ---
@@ -50,12 +51,12 @@ A Compose file has multiple sections:
 
 **version** is mandatory. (We should use "2" or later; version 1 is deprecated.)
 
-**services** is mandatory. A service is one or more replicas of the same image running as containers.
+**services** are mandatory. A service is one or more replicas of the same image running as containers.
 
-**networks** is optional and indicates to which networks containers should be connected.
+**networks** are optional and indicate to which networks containers should be connected.
 (By default, containers will be connected on a private, per-compose-file network.)
 
-**volumes** is optional and can define volumes to be used and/or shared by the containers.
+**volumes** are optional and can define volumes to be used and/or shared by the containers.
 
 ---
 
@@ -63,7 +64,7 @@ A Compose file has multiple sections:
 
 ### Start
 
-For start our containers
+To start our containers
 
 ```
 docker compose up
@@ -79,8 +80,7 @@ docker compose up -d
 
 ### Build
 
-If your docker compose require build you can use `build` option.
-It will execute docker build for all containers mentioning a build path.
+If you would like to build services containers you can use `build` option.
 
 ```
 docker compose build
@@ -133,10 +133,9 @@ docker compose logs web
 
 Create a compose file for running a nodejs app in `06-exercise-docker-compose` folder.
 
-The `nodejs` app must be builded by compose and
-expose port `5000` to your local port `9001`.
+The `nodejs` app must be built by compose and emust expose port `5000` to your local port `9001`.
 
-The app require a redis service named `redis` to work.
+The app requires a redis service named `redis` to work.
 
 ---
 
