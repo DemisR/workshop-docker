@@ -22,8 +22,9 @@ services:
       POSTGRES_USER: username
       POSTGRES_PASSWORD: password
       POSTGRES_DB: notesdb
-    volumes: 
-      - pgdata:/var/lib/postgresql/data 
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # init database schema running sql sript during stratup
 
   traefik:
     image: "traefik:v2.8"
@@ -48,7 +49,5 @@ services:
 volumes:
   pgdata:
     driver: local
-
-
   # http GET https://backend.local --verify false
   # http://localhost:8080/dashboard
